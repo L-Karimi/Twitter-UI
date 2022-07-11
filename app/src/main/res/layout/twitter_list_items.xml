@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/tvHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mazda"
+        app:layout_constraintTop_toTopOf="@+id/imgAvatar"
+        tools:layout_editor_absoluteX="109dp" />
+
+    <TextView
+        android:id="@+id/tvusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="mazdadev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvHandle"
+        app:layout_constraintTop_toTopOf="@+id/tvHandle" />
+
+    <TextView
+        android:id="@+id/tvTweet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="What programming language would you reccommend for a beginner?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <ImageView
+        android:id="@+id/imgRetweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:srcCompat="@drawable/ic_baseline_repeat_24"
+        tools:layout_editor_absoluteY="156dp" />
+
+    <TextView
+        android:id="@+id/tvTweetcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22"
+        app:layout_constraintStart_toEndOf="@+id/imgRetweet"
+        app:layout_constraintTop_toTopOf="@+id/imgRetweet" />
+
+    <ImageView
+        android:id="@+id/imgComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        app:layout_constraintStart_toEndOf="@+id/tvTweetcount"
+        app:srcCompat="@drawable/ic_baseline_comment_24"
+        tools:layout_editor_absoluteY="156dp" />
+
+    <TextView
+        android:id="@+id/tvCommentcount"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="3dp"
+        android:text="13"
+        app:layout_constraintStart_toEndOf="@+id/imgComment"
+        app:layout_constraintTop_toTopOf="@+id/imgComment" />
+
+    <ImageView
+        android:id="@+id/imgLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/imgComment"
+        app:srcCompat="@drawable/ic_baseline_thumb_up_24"
+        tools:layout_editor_absoluteX="260dp" />
+
+    <TextView
+        android:id="@+id/tvLikecount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        app:layout_constraintStart_toEndOf="@+id/imgLike"
+        app:layout_constraintTop_toTopOf="@+id/imgLike" />
+
+    <ImageView
+        android:id="@+id/imgShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintStart_toEndOf="@+id/tvLikecount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_share_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
