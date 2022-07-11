@@ -7,13 +7,13 @@
 
     <ImageView
         android:id="@+id/imgAvatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="37dp"
+        android:layout_height="95dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvTweet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        app:srcCompat="@drawable/lucy" />
 
     <TextView
         android:id="@+id/tvHandle"
@@ -46,15 +46,19 @@
         android:id="@+id/imgRetweet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
-        app:srcCompat="@drawable/ic_baseline_repeat_24"
-        tools:layout_editor_absoluteY="156dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTweet"
+        app:srcCompat="@drawable/ic_baseline_repeat_24" />
 
     <TextView
         android:id="@+id/tvTweetcount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="12dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="8dp"
         android:text="22"
+        app:layout_constraintBottom_toBottomOf="@+id/imgRetweet"
         app:layout_constraintStart_toEndOf="@+id/imgRetweet"
         app:layout_constraintTop_toTopOf="@+id/imgRetweet" />
 
@@ -62,17 +66,19 @@
         android:id="@+id/imgComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTweetcount"
         app:layout_constraintStart_toEndOf="@+id/tvTweetcount"
-        app:srcCompat="@drawable/ic_baseline_comment_24"
-        tools:layout_editor_absoluteY="156dp" />
+        app:layout_constraintTop_toTopOf="@+id/tvTweetcount"
+        app:srcCompat="@drawable/ic_baseline_comment_24" />
 
     <TextView
         android:id="@+id/tvCommentcount"
         android:layout_width="0dp"
         android:layout_height="16dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginStart="8dp"
         android:text="13"
+        app:layout_constraintBottom_toBottomOf="@+id/imgComment"
         app:layout_constraintStart_toEndOf="@+id/imgComment"
         app:layout_constraintTop_toTopOf="@+id/imgComment" />
 
@@ -80,15 +86,19 @@
         android:id="@+id/imgLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@+id/imgComment"
-        app:srcCompat="@drawable/ic_baseline_thumb_up_24"
-        tools:layout_editor_absoluteX="260dp" />
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCommentcount"
+        app:layout_constraintStart_toEndOf="@+id/tvCommentcount"
+        app:layout_constraintTop_toTopOf="@+id/tvCommentcount"
+        app:srcCompat="@drawable/ic_baseline_thumb_up_24" />
 
     <TextView
         android:id="@+id/tvLikecount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="8dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="8dp"
         android:text="6"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLike"
         app:layout_constraintStart_toEndOf="@+id/imgLike"
         app:layout_constraintTop_toTopOf="@+id/imgLike" />
 
@@ -96,10 +106,10 @@
         android:id="@+id/imgShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLikecount"
         app:layout_constraintStart_toEndOf="@+id/tvLikecount"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvLikecount"
         app:srcCompat="@drawable/ic_baseline_share_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
